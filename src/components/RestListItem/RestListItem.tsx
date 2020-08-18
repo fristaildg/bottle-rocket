@@ -38,7 +38,7 @@ export const StyledCategory = styled.span`
   font-size: 12px;
 `
 
-const RestListItem = ({info}: any) => {
+const RestListItem = ({info}: RestListItemProps) => {
   const history = useHistory()
 
   const handleClick = (name: string) => {
@@ -65,6 +65,13 @@ const RestListItem = ({info}: any) => {
       </StyledCategory>
     </StyledItem>
   )
+}
+
+type RestListItemProps = {
+  info: {
+    name: string,
+    category: string
+  }
 }
 
 export default RestListItem
