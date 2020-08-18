@@ -1,7 +1,7 @@
 export const fetchRestaurants = () => {
   return async (dispatch: any) => {
-    const response = await fetch('http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/restaurants.json')
-    const data = response.json()
+    const response = await fetch('https://s3.amazonaws.com/br-codingexams/restaurants.json')
+    const data = await response.json()
     dispatch(fetchRestaurantsSuccess(data))
   }
 }

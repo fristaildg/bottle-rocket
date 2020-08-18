@@ -5,9 +5,11 @@ const initialState = {
 export default (state = initialState, action: any) => {
   switch (action.type) {
     case `FETCH_RESTAURANTS_SUCCESS`:
+      const { restaurants } = action.payload
+
       return {
         ...state,
-        restaurants: action.payload.data
+        restaurants
       }
     default: 
       return state
