@@ -7,7 +7,7 @@ const StyledItem = styled.div`
   background-image: url(${bgGradient}), url(${(props: any) => props.backgroundImageURL});
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   width: 100%;
   height: 250px;
   color: #FFFFFF;
@@ -19,6 +19,7 @@ const StyledItem = styled.div`
   box-sizing: border-box;
   
   @media (min-width: 1024px) {
+    background-size: 100%;
     transition: background-size 0.2s ease-in-out;
     
     &:hover {
